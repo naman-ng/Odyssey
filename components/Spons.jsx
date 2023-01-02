@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/styles.module.css';
+import useWindowSize from './useWindowSize';
 
 function Spons({ name, front_img, back_img, link, number }) {
   const [bottom, setBottom] = useState(0);
   const [left, setLeft] = useState(0);
   const [right, setRight] = useState(0);
+  const { width } = useWindowSize();
 
   let bh = 0;
   useEffect(() => {
@@ -45,7 +47,6 @@ function Spons({ name, front_img, back_img, link, number }) {
     height: '301px',
     transformStyle: 'preserve-3d',
     position: 'relative',
-    // marginRight: '20px',
     transition: 'transform 1s',
     bottom: `${bottom}px`,
     marginLeft: `${left}%`,
@@ -53,11 +54,23 @@ function Spons({ name, front_img, back_img, link, number }) {
     // top: `-${bottom}px`
   };
 
+  const smallCard = {
+    width: '60%',
+    height: '301px',
+    transformStyle: 'preserve-3d',
+    position: 'relative',
+    transition: 'transform 1s',
+    margin: '20px auto'
+    // bottom: `${bottom}px`,
+    // marginLeft: `${left}%`,
+    // marginRight: `${right}%`,
+  }
+
   if (name.length > 1) {
     return (
-      <div className={styles.card} style={cardStyle}>
-        {console.log(left)}
-        {/* {console.log(number)} */}
+      <div className={styles.card} style={width>=768?cardStyle:smallCard}>
+        {/* {console.log(width)} */}
+
         <div className="" style={frontStyle}>
           <img src={`${front_img}`} alt="" className="w-full" />
         </div>
@@ -70,7 +83,7 @@ function Spons({ name, front_img, back_img, link, number }) {
     );
   } else {
     return (
-      <div className={styles.card + ` bottom-[${bh}] ml-[${left}%]`} style={cardStyle}>
+      <div className={styles.card} style={width>=768?cardStyle:smallCard}>
         <div className="" style={frontStyle}>
           <img src="/emptySpons.png" alt="" className="w-full" />
         </div>
