@@ -7,7 +7,3 @@
 .card:hover{
   transform: rotateY(180deg);
 }
-
-.container :nth-child(9n + 6){
-  margin-left: 9%;
-}
