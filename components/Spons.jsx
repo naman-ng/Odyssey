@@ -51,7 +51,6 @@ function Spons({ name, front_img, back_img, link, number }) {
     bottom: `${bottom}px`,
     marginLeft: `${left}%`,
     marginRight: `${right}%`,
-    // top: `-${bottom}px`
   };
 
   const smallCard = {
@@ -61,16 +60,11 @@ function Spons({ name, front_img, back_img, link, number }) {
     position: 'relative',
     transition: 'transform 1s',
     margin: '20px auto'
-    // bottom: `${bottom}px`,
-    // marginLeft: `${left}%`,
-    // marginRight: `${right}%`,
   }
 
   if (name.length > 1) {
     return (
       <div className={styles.card} style={width>=768?cardStyle:smallCard}>
-        {/* {console.log(width)} */}
-
         <div className="" style={frontStyle}>
           <img src={`${front_img}`} alt="" className="w-full" />
         </div>
