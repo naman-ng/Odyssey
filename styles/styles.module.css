@@ -1,0 +1,13 @@
+@media screen and (max-width:1000px) {
+    .contactFormLayerBottom{
+        bottom: -18rem;
+    }
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.container :nth-child(9n + 6){
+  margin-left: 9%;
+}

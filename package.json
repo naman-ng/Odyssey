@@ -1,0 +1,27 @@
+{
+  "name": "odyssey",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.1",
+    "@rooks/use-raf": "^4.11.2",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^8.0.2",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  }
+}
